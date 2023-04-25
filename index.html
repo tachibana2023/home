@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カウントダウンタイマー</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        #countdown {
+            font-size: 48px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>あと</h1>
+    <div id="countdown">--</div>
+    <h1>秒</h1>
+
+    <script>
+        const countdownElement = document.getElementById('countdown');
+        const targetDate = new Date('2023-06-17T00:30:00.000Z'); // UTCで指定（日本標準時で9時30分）
+
+        function updateCountdown() {
+            const now = new Date();
+            const remainingSeconds = Math.floor((targetDate - now) / 1000);
+
+            if (remainingSeconds >= 0) {
+                countdownElement.textContent = remainingSeconds;
+            } else {
+                countdownElement.textContent = '0';
+                clearInterval(interval);
+            }
+        }
+
+        const interval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+
+</html>
