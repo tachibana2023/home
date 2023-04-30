@@ -1,0 +1,687 @@
+@charset 'utf-8';
+
+/*文字コード指定*/
+
+
+/* ----- css reset(各ブラウザで指定されているスタイルを初期化)と全体設定 ----- */
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+textarea,
+p,
+th,
+td,
+img {
+    margin: 0;
+    /*ボックス外側の余白(値1つは上下左右をまとめて指定)*/
+    padding: 0;
+    /*ボックス内側の余白(値1つは上下左右をまとめて指定)*/
+    border: 0;
+    /*境界線指定*/
+}
+
+html,
+body {
+    height: 100%;
+    /*領域の高さ指定*/
+}
+
+body {
+    font-size: 75%;
+    /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+    line-height: 2;
+    /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
+    /*background: #161616;*/
+    /*背景は下に写りました*/
+    /*背景指定*/
+    font-family: 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', Osaka, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro';
+    /*フォントの種類指定(左から優先順位)*/
+    color: #000000;
+    /*文字色指定*/
+}
+
+h2 {
+    color: #ffffff;
+}
+
+body::before {
+    background-image: url(../images/background.jpg);
+    background-size: 80%;
+    content: "";
+    display: block;
+    position: fixed;/* 擬似要素ごと固定 */
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;/* 横幅いっぱい */
+    height: 100vh;/* 縦幅いっぱい */
+}
+
+ol,
+ul {
+    list-style: none;
+    /*リストマーカーの種類指定(noneはなし)*/
+}
+
+a {
+    color: #333;
+    /*文字色指定*/
+}
+
+a:hover {
+    text-decoration: none;
+    /*テキストの装飾指定(下線、上線など)(noneはなし)*/
+}
+
+.color1 {
+    color: #990000;
+    /*文字色指定*/
+}
+
+
+/*header ページ上の内容*/
+
+header {
+    position: fixed;
+    /*ボックスの配置方法(fixedは固定)*/
+    top: 0;
+    /*上からの距離(positionで指定している場合に適用)*/
+    left: 0;
+    /*左からの距離(positionで指定している場合に適用)*/
+    width: 100%;
+    /*幅指定(100%は画面横幅いっぱいに表示)*/
+    height: 70px;
+    /*領域の高さ指定*/
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100;Blue+Grey+Flat */
+    background: #000000;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #000000 0%, #000000 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #000000), color-stop(100%, #000000));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #000000 0%, #000000 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #000000 0%, #000000 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #000000 0%, #000000 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #000000 0%, #000000 100%);
+    /* W3C */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0);
+    /* IE6-9 */
+    z-index: 1000;
+    /*ボックス重なり順序指定*/
+}
+
+
+/*左上のロゴ*/
+
+h1 {
+    padding-left: 30px;
+    font-family: 'Berkshire Swash', cursive;
+    font-family: 'Ceviche One', cursive;
+    /*フォントの種類指定(googleのwebフォント)*/
+    font-size: 4em;
+    /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+    line-height: 70px;
+    /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
+    height: 70px;
+    /*領域の高さ指定*/
+}
+
+h1 a {
+    color: #fff;
+    /*文字色指定*/
+    text-decoration: none;
+    /*テキストの装飾指定(下線、上線など)(noneはなし)*/
+}
+
+h1 a:hover {
+    /*時間的変化指定*/
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    /*ここまで時間的変化指定*/
+    /*透明度設定*/
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    -moz-opacity: 0.6;
+    /*ここまで透明度設定*/
+}
+
+
+/*右上の内容*/
+
+.contact {
+    position: absolute;
+    /*ボックスの配置方法(absoluteは絶対位置配置)*/
+    top: 0;
+    /*上からの距離(positionで指定している場合に適用)*/
+    right: 3px;
+    /*右からの距離(positionで指定している場合に適用)*/
+}
+
+.info {
+    font-size: 1em;
+    /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+    width: 80px;
+    /*幅指定(100%は画面横幅いっぱいに表示)*/
+    height: 70px;
+    /*領域の高さ指定*/
+    text-align: center;
+    /*行の水平方向の揃え方(centerは中央揃え)*/
+}
+
+.info ul {
+    padding: 12px 0;
+    /*ボックス内側の余白*/
+}
+
+.info li {
+    padding: 0 0 7px 0;
+    /*ボックス内側の余白*/
+    line-height: 1;
+    /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
+}
+
+.info a {
+    color: #ffffff;
+    /*文字色指定*/
+    text-decoration: none;
+    /*テキストの装飾指定(下線、上線など)(noneはなし)*/
+}
+
+.info a:hover {
+    /*時間的変化指定*/
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    /*ここまで時間的変化指定*/
+    /*透明度設定*/
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    -moz-opacity: 0.6;
+    /*ここまで透明度設定*/
+}
+
+.copyright {
+    color: #fff;
+    /*文字色指定*/
+    font-size: 0.9em;
+    /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+    line-height: 15px;
+    /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
+    position: absolute;
+    /*ボックスの配置方法(fixedは固定)*/
+    bottom: 20px;
+    /*下からの距離(positionで指定している場合に適用)*/
+    left: 0;
+    /*左からの距離(positionで指定している場合に適用)*/
+}
+
+
+/*レイアウト設定*/
+
+.wrapper {
+    float: right;
+    /*要素を左か右に寄せて配置(rightは右に寄せる)*/
+    width: 100%;
+    /*幅指定(100%は画面横幅いっぱいに表示)*/
+    margin-top: 80px;
+    /*ボックス外側上の余白*/
+    margin-left: -200px;
+    /*ボックス外側左の余白*/
+}
+
+.content {
+    margin-left: 200px;
+    /*ボックス外側左の余白*/
+}
+
+
+/*メインの内容*/
+
+article {
+    width: 100%;
+    /*幅指定(100%は画面横幅いっぱいに表示)*/
+    margin: 20px 0 50px 0;
+    /*ボックス外側の余白*/
+}
+
+section {
+    width: 80%;
+    /*幅指定(100%は画面横幅いっぱいに表示)*/
+    margin: 0 auto;
+    /*ボックス外側の余白*/
+    padding: 20px;
+    /*ボックス内側の余白*/
+    background: #ffffff;
+    /*背景指定*/
+}
+
+article h2 {
+    font-size: 4em;
+    /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+    font-weight: normal;
+    /*フォントの太さ指定(normalは標準)*/
+    font-family: 'Berkshire Swash', cursive;
+    font-family: 'Ceviche One', cursive;
+    /*フォントの種類指定(左から優先順位)*/
+    text-align: center;
+    /*行の水平方向の揃え方(centerは中央揃え)*/
+    line-height: 3;
+    /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
+}
+
+article h3 {
+    font-size: 1.5em;
+    /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+    font-weight: normal;
+    /*フォントの太さ指定(normalは標準)*/
+    margin-bottom: 10px;
+    /*ボックス外側下の余白*/
+}
+
+article li,
+p {
+    font-size: 1.3em;
+    /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+    margin-left: 20px;
+    /*ボックス外側左の余白*/
+}
+
+.terms_content li li {
+    font-size: 100%;
+    /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+}
+
+
+/* ----- テーブル設定 ----- */
+
+.ta {
+    width: 100%;
+    /*幅指定(100%は画面横幅いっぱいに表示)*/
+    border-collapse: collapse;
+    /*境界線の表示指定(collapseは重ねて表示)*/
+    margin: 0 auto;
+    /*ボックス外側の余白(値2つは左から上下,左右の値(左右autoで中央配置))*/
+}
+
+.ta th,
+td {
+    border: none;
+    /*境界線の一括指定(noneはなし)*/
+    padding: 0 0 10px 10px;
+    /*ボックス内側の余白*/
+    color: #333;
+    /*文字色指定*/
+    font-size: 1.3em;
+    /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+    font-weight: normal;
+    /*フォントの太さ指定(normalは標準)*/
+    text-align: left;
+    /*行の水平方向の揃え方(leftは左寄せ)*/
+}
+
+
+/* ----- フォーム設定 ----- */
+
+.clearfix:after {
+    clear: both;
+    /*floatの回り込み解除*/
+    content: ".";
+    /*要素の直後に文字列や画像などのコンテンツを挿入*/
+    display: block;
+    /*要素の表示指定（blockはブロックボックス生成）*/
+    height: 0;
+    /*領域の高さ指定*/
+    visibility: hidden;
+    /*ボックスの表示（visible）、非表示（hidden）指定*/
+}
+
+.form dl {
+    width: 100%;
+    /*幅指定(100%は画面横幅いっぱいに表示)*/
+    padding: 15px 0;
+    /*ボックス内側の余白*/
+    border-bottom: 1px solid #dcdcdc;
+    /*境界下線指定*/
+    font-size: 1.3em;
+    /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+}
+
+.form dl dt {
+    width: 32%;
+    /*幅指定(100%は画面横幅いっぱいに表示)*/
+    float: left;
+    /*要素を左か右に寄せて配置(leftは左に寄せる)*/
+    padding: 5px 10px 10px 10px;
+    /*ボックス内側の余白*/
+}
+
+.form dl dd {
+    width: 65%;
+    /*幅指定(100%は画面横幅いっぱいに表示)*/
+    float: right;
+    /*要素を左か右に寄せて配置(rightは右に寄せる)*/
+}
+
+.form dl dd textarea,
+.form dl dd .txt {
+    background: #fff;
+    /*背景指定*/
+    padding: 0 10px;
+    /*ボックス内側の余白*/
+    border: 1px solid #dcdcdc;
+    /*境界線指定*/
+    /*角丸指定*/
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    /*ここまで角丸指定*/
+    width: 50%;
+    /*幅指定(100%は画面横幅いっぱいに表示)*/
+    height: 40px;
+    /*領域の高さ指定*/
+    line-height: 40px;
+    /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
+}
+
+.form dl dd textarea {
+    width: 90% !important;
+    /*幅指定(100%は画面横幅いっぱいに表示)*/
+    height: 100%;
+    /*領域の高さ指定*/
+}
+
+.form dd .ina {
+    ime-mode: disabled;
+    /*テキスト入力時のIMEの状態指定(disabledは英数字入力モード)*/
+}
+
+.chra li {
+    position: relative;
+    /*ボックスの配置方法(relativeは相対位置配置)*/
+    padding-left: 30px;
+    /*ボックス内側左の余白*/
+    line-height: 30px;
+    /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
+    font-size: 100%;
+    /* フォントサイズ指定(%はブラウザに設定した標準文字サイズ(通常16px)に対する値)*/
+}
+
+.chra li div {
+    position: absolute;
+    /*ボックスの配置方法(absoluteは絶対位置配置)*/
+    top: 5px;
+    /*上からの距離(positionで指定している場合に適用)*/
+    left: 0;
+    /*左からの距離(positionで指定している場合に適用)*/
+}
+
+.ctSelect {
+    background: url(../images/arrow.png) right center no-repeat;
+    /*背景指定*/
+    background-color: #fff;
+    /*背景指定*/
+    padding: 0 10px;
+    /*ボックス内側の余白*/
+    border: 1px solid #dcdcdc;
+    /*境界線指定*/
+    /*角丸指定*/
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    /*ここまで角丸指定*/
+    width: 50%;
+    /*幅指定(100%は画面横幅いっぱいに表示)*/
+    height: 40px;
+    /*領域の高さ指定*/
+    line-height: 40px;
+    /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
+}
+
+.kakunin {
+    width: 150px;
+    /*幅指定(100%は画面横幅いっぱいに表示)*/
+    margin: 20px auto;
+    /*ボックス外側の余白*/
+}
+
+.btn_submit {
+    width: 150px;
+    /*幅指定(100%は画面横幅いっぱいに表示)*/
+    padding: 15px 0 13px 0;
+    /*ボックス内側の余白*/
+    border: solid 1px #001a9b;
+    /*境界線指定*/
+    /*角丸指定*/
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    /*ここまで角丸指定*/
+    /*背景グラデーション指定*/
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #0036ff), color-stop(1.00, #001a9b));
+    background: -webkit-linear-gradient(#0036ff, #001a9b);
+    background: -moz-linear-gradient(#0036ff, #001a9b);
+    background: -o-linear-gradient(#0036ff, #001a9b);
+    background: -ms-linear-gradient(#0036ff, #001a9b);
+    background: linear-gradient(#0036ff, #001a9b);
+    /*ここまで背景グラデーション指定*/
+    color: #fff;
+    /*文字色指定*/
+    text-align: center;
+    /*行の水平方向の揃え方(centerは中央揃え)*/
+    font-size: 100%;
+    /* フォントサイズ指定(%はブラウザに設定した標準文字サイズ(通常16px)に対する値)*/
+    font-weight: bold;
+    /*フォントの太さ指定(normalは標準)*/
+}
+
+.btn_submit:hover {
+    /*透明度設定*/
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.8;
+    /*ここまで透明度設定*/
+    /*時間的変化指定*/
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.s;
+    transition: 0.5s;
+    /*ここまで時間的変化指定*/
+    cursor: pointer;
+    /*マウスカーソルの形状指定(pointerはリンクカーソル)*/
+}
+
+.required {
+    color: #ff0000;
+    /*文字色指定*/
+}
+
+
+/*map設定*/
+
+.gmap {
+    position: relative;
+    /*ボックスの配置方法(relativeは相対位置配置)*/
+    padding-bottom: 56.25%;
+    /*ボックス内側下の余白*/
+    padding-top: 30px;
+    /*ボックス内側上の余白*/
+    height: 0;
+    /*領域の高さ指定*/
+    overflow: hidden;
+    /*ボックスのはみ出た部分の表示指定(hiddenは非表示)*/
+}
+
+.gmap iframe {
+    position: absolute;
+    /*ボックスの配置方法(absoluteは絶対位置配置)*/
+    top: 0;
+    /*上からの距離(positionで指定している場合に適用)*/
+    left: 0;
+    /*左からの距離(positionで指定している場合に適用)*/
+    width: 100%;
+    /*幅指定(100%は画面横幅いっぱいに表示)*/
+    height: 100%;
+    /*領域の高さ指定*/
+}
+
+
+/*無限スクロール設定*/
+
+.scroll_area {
+    margin: 0 auto;
+    /*ボックス外側の余白*/
+    width: 100%;
+    /*幅指定(100%は画面横幅いっぱいに表示)*/
+}
+
+#infscr-loading {
+    z-index: 100;
+    /*ボックス重なり順序指定*/
+    position: fixed;
+    /*ボックスの配置方法(fixedは固定)*/
+    left: 50%;
+    /*左からの距離(positionで指定している場合に適用)*/
+    bottom: 20px;
+    /*下からの距離(positionで指定している場合に適用)*/
+}
+
+
+/*ページトップに戻るアイコン*/
+
+.pagetop:hover {
+    /*時間的変化指定*/
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    /*ここまで時間的変化指定*/
+    color: #ffffff;
+    /*文字色指定*/
+    /*透明度設定*/
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    -moz-opacity: 0.6;
+    /*ここまで透明度設定*/
+}
+
+
+/*レスポンシブ設定*/
+
+@media screen and (max-width: 768px) {
+    h3,
+    p,
+    ol,
+    li,
+    th,
+    td,
+    dl {
+        font-size: 1em !important;
+        /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+    }
+    header {
+        height: 50px;
+        /*領域の高さ指定*/
+    }
+    h1 {
+        font-size: 2em;
+        /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+        line-height: 50px;
+        /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
+        height: 50px;
+        /*領域の高さ指定*/
+    }
+    article h2 {
+        font-size: 2em;
+        /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+    }
+    .info {
+        font-size: 0.9em;
+        /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+        width: 80px;
+        /*幅指定(100%は画面横幅いっぱいに表示)*/
+        height: 50px;
+        /*領域の高さ指定*/
+    }
+    .info ul {
+        padding: 5px 0;
+        /*ボックス内側の余白*/
+    }
+    .wrapper {
+        margin: 50px 0 0 0;
+        /*ボックス外側の余白*/
+    }
+    .content {
+        margin: 0;
+        /*ボックス外側の余白*/
+        width: 100%;
+        /*幅指定(100%は画面横幅いっぱいに表示)*/
+    }
+    section {
+        width: 90%;
+        /*幅指定(100%は画面横幅いっぱいに表示)*/
+    }
+    .form dl {
+        width: 100%;
+        /*幅指定(100%は画面横幅いっぱいに表示)*/
+        padding: 0;
+        /*ボックス内側の余白*/
+        border: none;
+        /*境界線の一括指定(noneはなし)*/
+    }
+    .form dl dt {
+        float: none;
+        /*要素を左か右に寄せて配置(noneはなし)*/
+        position: static;
+        /*ボックスの配置方法(staticは指定なし)*/
+        width: 100%;
+        /*幅指定(100%は画面横幅いっぱいに表示)*/
+    }
+    .form dl dd {
+        float: none;
+        /*要素を左か右に寄せて配置(noneはなし)*/
+        width: 100%;
+        /*幅指定(100%は画面横幅いっぱいに表示)*/
+        margin-left: 10px;
+        /*ボックス外側左の余白*/
+    }
+    .form dl dd .txt,
+    .ctSelect {
+        width: 90%;
+        /*幅指定(100%は画面横幅いっぱいに表示)*/
+        height: 30px;
+        /*領域の高さ指定*/
+        line-height: 30px;
+        /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
+    }
+    .copyright {
+        /*透明度設定*/
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        -moz-opacity: 0.5;
+        /*ここまで透明度設定*/
+    }
+}

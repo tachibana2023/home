@@ -1,0 +1,75 @@
+.twilight-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    background: #000000;
+}
+
+.slide-wrapper {
+    position: relative;
+}
+
+.twilight-show {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.twilight-show .twilight-box {
+    position: relative;
+    width: 99999px;
+    opacity: 1;
+    -webkit-transition-duration: 0s;
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-property: -webkit-transform, opacity;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.twilight-show a {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+.twilight-show .twilight-box div {
+    float: left;
+    opacity: 1;
+    -webkit-transition-duration: 0s;
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-property: -webkit-transform, opacity;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.twilight-show .arrow-left,
+.twilight-show .arrow-right {
+    position: absolute;
+    z-index: 10;
+    top: 220px;
+    cursor: pointer;
+}
+
+.twilight-show .arrow-left {
+    display: none;
+    left: 20px;
+}
+
+.twilight-show .arrow-right {
+    display: none;
+    left: 880px;
+}
+
+.twilight-show img {
+    width: 800px;
+}
+
+@media screen and (max-width: 768px) {
+    .twilight-show {
+        height: auto;
+    }
+    .twilight-box img {
+        width: 480px;
+    }
+}
