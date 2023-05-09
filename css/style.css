@@ -59,7 +59,7 @@ h2 {
 }
 
 body::before {
-    background-image: url(../images/background.jpg);
+    background-image: url(../images/background.webp);
     background-size: 80%;
     content: "";
     display: block;

@@ -32,6 +32,44 @@
 
         gtag('config', 'G-73TMZGG6F3');
     </script>
+
+    <!-- ローデュング画面 -->
+    <style>
+        #loader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: #000000;
+            text-align: center;
+        }
+
+        .fade-out {
+            animation: fadeOut 1s;
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById("loader");
+            loader.classList.add("fade-out");
+            loader.addEventListener('animationend', function () {
+                loader.style.display = "none";
+            });
+        });
+    </script>
+
 </head>
 
 <body>
@@ -112,6 +150,11 @@
 
 
 
+    <!-- ローディング画面もどき -->
+    <div id="loader">
+    </div>
+
+
     <div class="wrapper">
         <div class="content">
 
@@ -120,11 +163,9 @@
                 <div class="slide-wrapper">
                     <div class="twilight-show">
                         <div class="twilight-box">
-                            <div><img src="images/slide1.jpg" alt="スライドショー" /></div>
+                            <div><img src="images/slide1.webp" alt="スライドショー" /></div>
                             <div><img src="images/slide2.png" alt="スライドショー" /></div>
                             <div><img src="images/slide3.png" alt="スライドショー" /></div>
-                            <div><img src="images/slide4.png" alt="スライドショー" /></div>
-                            <div><img src="images/slide5.png" alt="スライドショー" /></div>
                         </div>
                         <div class="arrow-right"></div>
                     </div>
@@ -133,7 +174,7 @@
 
             <!--ページのメイン部分-->
             <article id="about_article">
-                <h2>実施概要的な？</h2>
+                <h2>実施概要</h2>
                 <section>
                     <h3>2023年度たちばな祭について</h3>
                     <ul>
