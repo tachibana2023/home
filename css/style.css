@@ -233,7 +233,7 @@ h1 a:hover {
     /*ボックスの配置方法(fixedは固定)*/
     bottom: 20px;
     /*下からの距離(positionで指定している場合に適用)*/
-    left: 0;
+    left: 20px;
     /*左からの距離(positionで指定している場合に適用)*/
 }
 
@@ -256,6 +256,9 @@ h1 a:hover {
     /*ボックス外側左の余白*/
 }
 
+.center {
+    text-align: center;
+}
 
 /*メインの内容*/
 
@@ -275,6 +278,14 @@ section {
     /*ボックス内側の余白*/
     background: #ffffff;
     /*背景指定*/
+}
+
+p {
+    font-size: 24px;
+    font-family: 'Yuji Syuku', cursive;
+    text-align: center;
+    font-weight: normal;
+    color: #fff;
 }
 
 article h2 {
@@ -301,8 +312,7 @@ article h3 {
     /*ボックス外側下の余白*/
 }
 
-article li,
-p {
+article li {
     font-size: 1.3em;
     /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
     margin-left: 20px;
@@ -342,184 +352,6 @@ td {
     /*行の水平方向の揃え方(leftは左寄せ)*/
 }
 
-
-/* ----- フォーム設定 ----- */
-
-.clearfix:after {
-    clear: both;
-    /*floatの回り込み解除*/
-    content: ".";
-    /*要素の直後に文字列や画像などのコンテンツを挿入*/
-    display: block;
-    /*要素の表示指定（blockはブロックボックス生成）*/
-    height: 0;
-    /*領域の高さ指定*/
-    visibility: hidden;
-    /*ボックスの表示（visible）、非表示（hidden）指定*/
-}
-
-.form dl {
-    width: 100%;
-    /*幅指定(100%は画面横幅いっぱいに表示)*/
-    padding: 15px 0;
-    /*ボックス内側の余白*/
-    border-bottom: 1px solid #dcdcdc;
-    /*境界下線指定*/
-    font-size: 1.3em;
-    /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
-}
-
-.form dl dt {
-    width: 32%;
-    /*幅指定(100%は画面横幅いっぱいに表示)*/
-    float: left;
-    /*要素を左か右に寄せて配置(leftは左に寄せる)*/
-    padding: 5px 10px 10px 10px;
-    /*ボックス内側の余白*/
-}
-
-.form dl dd {
-    width: 65%;
-    /*幅指定(100%は画面横幅いっぱいに表示)*/
-    float: right;
-    /*要素を左か右に寄せて配置(rightは右に寄せる)*/
-}
-
-.form dl dd textarea,
-.form dl dd .txt {
-    background: #fff;
-    /*背景指定*/
-    padding: 0 10px;
-    /*ボックス内側の余白*/
-    border: 1px solid #dcdcdc;
-    /*境界線指定*/
-    /*角丸指定*/
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    /*ここまで角丸指定*/
-    width: 50%;
-    /*幅指定(100%は画面横幅いっぱいに表示)*/
-    height: 40px;
-    /*領域の高さ指定*/
-    line-height: 40px;
-    /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
-}
-
-.form dl dd textarea {
-    width: 90% !important;
-    /*幅指定(100%は画面横幅いっぱいに表示)*/
-    height: 100%;
-    /*領域の高さ指定*/
-}
-
-.form dd .ina {
-    ime-mode: disabled;
-    /*テキスト入力時のIMEの状態指定(disabledは英数字入力モード)*/
-}
-
-.chra li {
-    position: relative;
-    /*ボックスの配置方法(relativeは相対位置配置)*/
-    padding-left: 30px;
-    /*ボックス内側左の余白*/
-    line-height: 30px;
-    /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
-    font-size: 100%;
-    /* フォントサイズ指定(%はブラウザに設定した標準文字サイズ(通常16px)に対する値)*/
-}
-
-.chra li div {
-    position: absolute;
-    /*ボックスの配置方法(absoluteは絶対位置配置)*/
-    top: 5px;
-    /*上からの距離(positionで指定している場合に適用)*/
-    left: 0;
-    /*左からの距離(positionで指定している場合に適用)*/
-}
-
-.ctSelect {
-    background: url(../images/arrow.png) right center no-repeat;
-    /*背景指定*/
-    background-color: #fff;
-    /*背景指定*/
-    padding: 0 10px;
-    /*ボックス内側の余白*/
-    border: 1px solid #dcdcdc;
-    /*境界線指定*/
-    /*角丸指定*/
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    /*ここまで角丸指定*/
-    width: 50%;
-    /*幅指定(100%は画面横幅いっぱいに表示)*/
-    height: 40px;
-    /*領域の高さ指定*/
-    line-height: 40px;
-    /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
-}
-
-.kakunin {
-    width: 150px;
-    /*幅指定(100%は画面横幅いっぱいに表示)*/
-    margin: 20px auto;
-    /*ボックス外側の余白*/
-}
-
-.btn_submit {
-    width: 150px;
-    /*幅指定(100%は画面横幅いっぱいに表示)*/
-    padding: 15px 0 13px 0;
-    /*ボックス内側の余白*/
-    border: solid 1px #001a9b;
-    /*境界線指定*/
-    /*角丸指定*/
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    /*ここまで角丸指定*/
-    /*背景グラデーション指定*/
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #0036ff), color-stop(1.00, #001a9b));
-    background: -webkit-linear-gradient(#0036ff, #001a9b);
-    background: -moz-linear-gradient(#0036ff, #001a9b);
-    background: -o-linear-gradient(#0036ff, #001a9b);
-    background: -ms-linear-gradient(#0036ff, #001a9b);
-    background: linear-gradient(#0036ff, #001a9b);
-    /*ここまで背景グラデーション指定*/
-    color: #fff;
-    /*文字色指定*/
-    text-align: center;
-    /*行の水平方向の揃え方(centerは中央揃え)*/
-    font-size: 100%;
-    /* フォントサイズ指定(%はブラウザに設定した標準文字サイズ(通常16px)に対する値)*/
-    font-weight: bold;
-    /*フォントの太さ指定(normalは標準)*/
-}
-
-.btn_submit:hover {
-    /*透明度設定*/
-    opacity: 0.8;
-    filter: alpha(opacity=80);
-    -moz-opacity: 0.8;
-    /*ここまで透明度設定*/
-    /*時間的変化指定*/
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.s;
-    transition: 0.5s;
-    /*ここまで時間的変化指定*/
-    cursor: pointer;
-    /*マウスカーソルの形状指定(pointerはリンクカーソル)*/
-}
-
-.required {
-    color: #ff0000;
-    /*文字色指定*/
-}
-
-
 /*map設定*/
 
 .gmap {
@@ -546,27 +378,6 @@ td {
     /*幅指定(100%は画面横幅いっぱいに表示)*/
     height: 100%;
     /*領域の高さ指定*/
-}
-
-
-/*無限スクロール設定*/
-
-.scroll_area {
-    margin: 0 auto;
-    /*ボックス外側の余白*/
-    width: 100%;
-    /*幅指定(100%は画面横幅いっぱいに表示)*/
-}
-
-#infscr-loading {
-    z-index: 100;
-    /*ボックス重なり順序指定*/
-    position: fixed;
-    /*ボックスの配置方法(fixedは固定)*/
-    left: 50%;
-    /*左からの距離(positionで指定している場合に適用)*/
-    bottom: 20px;
-    /*下からの距離(positionで指定している場合に適用)*/
 }
 
 
