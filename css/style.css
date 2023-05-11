@@ -132,7 +132,6 @@ header {
 
 h1 {
     padding-left: 30px;
-    font-family: 'Berkshire Swash', cursive;
     font-family: 'Ceviche One', cursive;
     /*フォントの種類指定(googleのwebフォント)*/
     font-size: 4em;
@@ -293,8 +292,7 @@ article h2 {
     /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
     font-weight: normal;
     /*フォントの太さ指定(normalは標準)*/
-    /* font-family: 'Berkshire Swash', cursive;
-    font-family: 'Ceviche One', cursive; */
+    /* font-family: 'Ceviche One', cursive; */
     font-family: 'Yuji Syuku', cursive;
     /*フォントの種類指定(左から優先順位)*/
     text-align: center;
