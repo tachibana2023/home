@@ -25,20 +25,20 @@ var scrolltotop = {
         isvisible: false,
         shouldvisible: false
     },
-    scrollup: function() {
+    scrollup: function () {
         if (!this.cssfixedsupport) //if control is positioned using JavaScript
-        this.$control.css({
-            opacity: 0
-        }) //hide control immediately after clicking it
+            this.$control.css({
+                opacity: 0
+            }) //hide control immediately after clicking it
         var dest = isNaN(this.setting.scrollto) ? this.setting.scrollto : parseInt(this.setting.scrollto)
         if (typeof dest == "string" && jQuery('#' + dest).length == 1) //check element set by string exists
-        dest = jQuery('#' + dest).offset().top
+            dest = jQuery('#' + dest).offset().top
         else dest = 0
         this.$body.animate({
             scrollTop: dest
         }, this.setting.scrollduration);
     },
-    keepfixed: function() {
+    keepfixed: function () {
         var $window = jQuery(window)
         var controlx = $window.scrollLeft() + $window.width() - this.$control.width() - this.controlattrs.offsetx
         var controly = $window.scrollTop() + $window.height() - this.$control.height() - this.controlattrs.offsety
@@ -47,7 +47,7 @@ var scrolltotop = {
             top: controly + 'px'
         })
     },
-    togglecontrol: function() {
+    togglecontrol: function () {
         var scrolltop = jQuery(window).scrollTop()
         if (!this.cssfixedsupport) this.keepfixed()
         this.state.shouldvisible = (scrolltop >= this.setting.startline) ? true : false
@@ -63,8 +63,8 @@ var scrolltotop = {
             this.state.isvisible = false
         }
     },
-    init: function() {
-        jQuery(document).ready(function($) {
+    init: function () {
+        jQuery(document).ready(function ($) {
             var mainobj = scrolltotop
             var iebrws = document.all
             mainobj.cssfixedsupport = !iebrws || iebrws && document.compatMode == "CSS1Compat" && window.XMLHttpRequest //not IE or IE7+ browsers in standards mode
@@ -77,20 +77,20 @@ var scrolltotop = {
                 cursor: 'pointer'
             }).attr({
                 title: 'Scroll Back to Top'
-            }).click(function() {
+            }).click(function () {
                 mainobj.scrollup();
                 return false
             }).appendTo('body')
             if (document.all && !window.XMLHttpRequest && mainobj.$control.text() != '') //loose check for IE6 and below, plus whether control contains any text
-            mainobj.$control.css({
-                width: mainobj.$control.width()
-            }) //IE6- seems to require an explicit width on a DIV containing text
+                mainobj.$control.css({
+                    width: mainobj.$control.width()
+                }) //IE6- seems to require an explicit width on a DIV containing text
             mainobj.togglecontrol()
-            $('a[href="' + mainobj.anchorkeyword + '"]').click(function() {
+            $('a[href="' + mainobj.anchorkeyword + '"]').click(function () {
                 mainobj.scrollup()
                 return false
             })
-            $(window).bind('scroll resize', function(e) {
+            $(window).bind('scroll resize', function (e) {
                 mainobj.togglecontrol()
             })
         })

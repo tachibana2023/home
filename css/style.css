@@ -42,14 +42,12 @@ body {
 
 body {
     font-size: 75%;
-    /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
     line-height: 2;
     /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
     /*background: #161616;*/
     /*背景は下に写りました*/
     /*背景指定*/
     font-family: 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', Osaka, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro';
-    /*フォントの種類指定(左から優先順位)*/
     color: #000000;
     /*文字色指定*/
 }
@@ -132,10 +130,9 @@ header {
 
 h1 {
     padding-left: 30px;
-    font-family: 'Ceviche One', cursive;
+    font-family: serif;
     /*フォントの種類指定(googleのwebフォント)*/
-    font-size: 4em;
-    /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+    font-size: 3em;
     line-height: 70px;
     /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
     height: 70px;
@@ -143,6 +140,9 @@ h1 {
 }
 
 h1 a {
+    top: auto;
+    left: auto;
+    /* color: rgb(255, 235, 78); */
     color: #fff;
     /*文字色指定*/
     text-decoration: none;
@@ -178,7 +178,6 @@ h1 a:hover {
 
 .info {
     font-size: 1em;
-    /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
     width: 80px;
     /*幅指定(100%は画面横幅いっぱいに表示)*/
     height: 70px;
@@ -225,7 +224,6 @@ h1 a:hover {
     color: #fff;
     /*文字色指定*/
     font-size: 0.9em;
-    /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
     line-height: 15px;
     /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
     position: absolute;
@@ -279,31 +277,29 @@ section {
     /*背景指定*/
 }
 
-p {
-    font-size: 24px;
+.main_content {
+    font-size: 2.3em;
     font-family: 'Yuji Syuku', cursive;
     text-align: center;
     font-weight: normal;
     color: #fff;
+    padding: 0 8%;
 }
 
 article h2 {
-    font-size: 4em;
-    /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+    font-size: 4.5em;
     font-weight: normal;
     /*フォントの太さ指定(normalは標準)*/
-    /* font-family: 'Ceviche One', cursive; */
     font-family: 'Yuji Syuku', cursive;
-    /*フォントの種類指定(左から優先順位)*/
     text-align: center;
     /*行の水平方向の揃え方(centerは中央揃え)*/
-    line-height: 3;
+    line-height: 2.5;
     /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
 }
 
 article h3 {
+    font-family: sans-serif;
     font-size: 1.5em;
-    /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
     font-weight: normal;
     /*フォントの太さ指定(normalは標準)*/
     margin-bottom: 10px;
@@ -311,15 +307,14 @@ article h3 {
 }
 
 article li {
+    font-family: sans-serif;
     font-size: 1.3em;
-    /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
     margin-left: 20px;
     /*ボックス外側左の余白*/
 }
 
 .terms_content li li {
     font-size: 100%;
-    /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
 }
 
 
@@ -343,7 +338,7 @@ td {
     color: #333;
     /*文字色指定*/
     font-size: 1.3em;
-    /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+    
     font-weight: normal;
     /*フォントの太さ指定(normalは標準)*/
     text-align: left;
@@ -381,6 +376,10 @@ td {
 
 /*ページトップに戻るアイコン*/
 
+.pagetop {
+    color: #fff;
+}
+
 .pagetop:hover {
     /*時間的変化指定*/
     -webkit-transition: 0.5s;
@@ -410,7 +409,6 @@ td {
     td,
     dl {
         font-size: 1em !important;
-        /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
     }
     header {
         height: 50px;
@@ -418,19 +416,19 @@ td {
     }
     h1 {
         font-size: 2em;
-        /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
         line-height: 50px;
         /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
         height: 50px;
         /*領域の高さ指定*/
     }
     article h2 {
-        font-size: 2em;
-        /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+        font-size: 3em;
+    }
+    .main_content {
+        font-size: 1.5em;
     }
     .info {
         font-size: 0.9em;
-        /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
         width: 80px;
         /*幅指定(100%は画面横幅いっぱいに表示)*/
         height: 50px;
@@ -453,39 +451,6 @@ td {
     section {
         width: 90%;
         /*幅指定(100%は画面横幅いっぱいに表示)*/
-    }
-    .form dl {
-        width: 100%;
-        /*幅指定(100%は画面横幅いっぱいに表示)*/
-        padding: 0;
-        /*ボックス内側の余白*/
-        border: none;
-        /*境界線の一括指定(noneはなし)*/
-    }
-    .form dl dt {
-        float: none;
-        /*要素を左か右に寄せて配置(noneはなし)*/
-        position: static;
-        /*ボックスの配置方法(staticは指定なし)*/
-        width: 100%;
-        /*幅指定(100%は画面横幅いっぱいに表示)*/
-    }
-    .form dl dd {
-        float: none;
-        /*要素を左か右に寄せて配置(noneはなし)*/
-        width: 100%;
-        /*幅指定(100%は画面横幅いっぱいに表示)*/
-        margin-left: 10px;
-        /*ボックス外側左の余白*/
-    }
-    .form dl dd .txt,
-    .ctSelect {
-        width: 90%;
-        /*幅指定(100%は画面横幅いっぱいに表示)*/
-        height: 30px;
-        /*領域の高さ指定*/
-        line-height: 30px;
-        /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
     }
     .copyright {
         /*透明度設定*/

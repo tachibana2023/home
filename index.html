@@ -6,15 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>たちばな祭2023</title>
     <meta name="Description" content="千葉県立船橋高等学校の文化祭、「たちばな祭」の2023年公式サイトです。" />
-    <meta name="Keywords" content="たちばな祭,文化祭,県船,県立船橋,2023,千葉県立船橋高等学校" />
+    <meta name="Keywords" content="たちばな祭,文化祭,県船,県立船橋,2023,船橋高等学校,令和5年度" />
 
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
     <link rel="shortcut icon" type="img/x-icon" href="images/favicon.ico" />
 
     <link rel="stylesheet" href="css/style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Ceviche+One&family=Yuji+Syuku&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
     <!--google_webフォント-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!--アイコンwebフォント-->
@@ -33,6 +31,7 @@
         gtag('config', 'G-73TMZGG6F3');
     </script>
 
+
     <!-- ローデュング画面 -->
     <style>
         #loader {
@@ -43,6 +42,16 @@
             height: 100%;
             z-index: 9999;
             background: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #loader-text {
+            color: white;
+            font-family: sans-serif;
+            font-size: 24px;
+            margin-left: 10px;
             text-align: center;
         }
 
@@ -60,13 +69,27 @@
             }
         }
     </style>
+
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var loaderText = document.getElementById("loader-text");
+        });
+
         window.addEventListener('load', function () {
             var loader = document.getElementById("loader");
-            loader.classList.add("fade-out");
-            loader.addEventListener('animationend', function () {
-                loader.style.display = "none";
-            });
+            var dots = "";
+            var intervalId = setInterval(function () {
+                var loaderText = document.getElementById("loader-text");
+                dots += ".";
+                loaderText.innerHTML = "Loading" + dots;
+            }, 50);
+            setTimeout(function () {
+                loader.classList.add("fade-out");
+                loader.addEventListener('animationend', function () {
+                    loader.style.display = "none";
+                    clearInterval(intervalId);
+                });
+            }, 0);
         });
     </script>
 
@@ -82,7 +105,7 @@
         <button type="button" id="toggleMenu" class="toggle_menu"> <i class="fa fa-bars"></i> </button>
 
         <!--ロゴ（ページ左上のサイト名）-->
-        <h1><a href="index.html" title="たちばな祭公式">Home</a></h1>
+        <h1><a href="index.html" title="たちばな祭公式">たちばな祭2023</a></h1>
 
         <!--ページ右上の表示-->
         <div class="contact info">
@@ -98,10 +121,6 @@
     <!--ナビゲーションメニューー-->
     <nav class="vertical_nav">
         <ul id="js-menu" class="menu">
-            <!-- <li class="menu--item">
-                <a href="about.html" class="menu--link" title="ABOUT"> <i
-                        class="menu--icon  fa fa-fw fa-info-circle"></i> <span class="menu--label">実施概要</span> </a>
-            </li> -->
             <li class="menu--item">
                 <a href="notes.html" class="menu--link" title="NOTES"> <i
                         class="menu--icon  fa fa-fw fa-exclamation-triangle"></i> <span class="menu--label">注意事項</span>
@@ -122,7 +141,7 @@
                 </ul>
             </li>
             <li class="menu--item">
-                <a href="panf.html" class="menu--link" title="PANF"> <i class="menu--icon  fa fa-fw fa-book"></i> <span
+                <a href="panf.html" class="menu--link" title="PAN"> <i class="menu--icon  fa fa-fw fa-book"></i> <span
                         class="menu--label">ぱんふ(まだ)</span> </a>
             </li>
             <li class="menu--item">
@@ -154,6 +173,7 @@
 
     <!-- ローディング画面もどき -->
     <div id="loader">
+        <!-- <div id="loader-text">Loading</div> -->
     </div>
 
 
@@ -180,38 +200,46 @@
             <article id="about_article">
                 <h2>実施概要</h2>
 
-                <p>今年はn年ぶりに制限なしでの開催をします！</p>
-
-                <p>ぜ　ひ　き　て　ね</p>
+                <div class="main_content">今年はn年ぶりに制限なしでの開催をします！</div>
+                <div class="main_content">やったね！</div>
 
                 <p> </p>
 
                 <section>
                     <h3>2023年度たちばな祭について</h3>
                     <ul>
-                        <li>coming soon...</li>
-                        <li>どーしよっCAね</li>
+                        <li>実施形態</li>
+                        <li>・6月17日(土)9:30-12:30、13:00-16:00</li>
+                        <li>・6月18日(日)9:00-12:00</li>
+                        <br>
+                        <h3><span class="color1"> 今年から一般公開が再開します！</span></h3>
+
                     </ul>
                 </section>
             </article>
 
 
             <article>
-                <h2></h2>
+                <h2>「船高とは」</h2>
                 <section>
-                    <h3>coming soon....</h3>
+                    <h3>たちばな祭2023テーマ「船高とは」に込めた想いは主に2点あります。</h3>
                     <ul>
-                        <li> wait...
-                        <li> <span class="color1">color1...</span>
+                        <li> 1.日々様々な問いと格闘している船高生ひとりひとりが、自分の思う船高を日々追い求めながら取り組むような文化祭にしたいという点
+                        <li> 2.「船高」を創っていくのは我々船高生であり、その自覚を忘れずにもってほしいという点
                     </ul>
                 </section>
             </article>
+            <div class="main_content"> また、今年から一般公開が再開するので、一般の方々に、それぞれの、あなただけの「船高」を見つけてもらいたいという願いも込めたテーマとなっております。</div>
 
             <article>
                 <h2>注意事項</h2>
                 <section>
-                    <h3>please wait...</h3>
+                    <h3></h3>
                     <ul>
+                        <li>・上履きと外履き入れを必ず持参してください。</li>
+                        <li>・入場開始の30分前から開場します。それより前の来場はお控えください。</li>
+                        <li>・出したごみはお持ち帰りください。</li>
+                        <li>・開催時間終了の30分前に入場を締め切らせていただきます。ご了承ください。</li>
                         <li></li>
                     </ul>
                 </section>
