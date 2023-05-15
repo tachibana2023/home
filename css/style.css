@@ -61,12 +61,15 @@ body::before {
     background-size: 80%;
     content: "";
     display: block;
-    position: fixed;/* 擬似要素ごと固定 */
+    position: fixed;
+    /* 擬似要素ごと固定 */
     top: 0;
     left: 0;
     z-index: -1;
-    width: 100%;/* 横幅いっぱい */
-    height: 100vh;/* 縦幅いっぱい */
+    width: 100%;
+    /* 横幅いっぱい */
+    height: 100vh;
+    /* 縦幅いっぱい */
 }
 
 ol,
@@ -119,7 +122,7 @@ header {
     /* IE10+ */
     background: linear-gradient(to bottom, #000000 0%, #000000 100%);
     /* W3C */
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000', GradientType=0);
     /* IE6-9 */
     z-index: 1000;
     /*ボックス重なり順序指定*/
@@ -283,7 +286,14 @@ section {
     text-align: center;
     font-weight: normal;
     color: #fff;
-    padding: 0 8%;
+    padding: 0 7%;
+}
+
+.right {
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
 }
 
 article h2 {
@@ -293,7 +303,7 @@ article h2 {
     font-family: 'Yuji Syuku', cursive;
     text-align: center;
     /*行の水平方向の揃え方(centerは中央揃え)*/
-    line-height: 2.5;
+    line-height: 2;
     /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
 }
 
@@ -304,6 +314,20 @@ article h3 {
     /*フォントの太さ指定(normalは標準)*/
     margin-bottom: 10px;
     /*ボックス外側下の余白*/
+}
+
+article a {
+    font-size: 2.8em !important;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+
+    box-sizing: content-box;
+    width: 50%;
+    height: 60%;
+    border: 1.5px solid #ffffff;
+    padding: 8px;
+    margin: 5% auto;
 }
 
 article li {
@@ -338,7 +362,7 @@ td {
     color: #333;
     /*文字色指定*/
     font-size: 1.3em;
-    
+
     font-weight: normal;
     /*フォントの太さ指定(normalは標準)*/
     text-align: left;
@@ -401,6 +425,7 @@ td {
 /*レスポンシブ設定*/
 
 @media screen and (max-width: 768px) {
+
     h3,
     p,
     ol,
@@ -410,10 +435,12 @@ td {
     dl {
         font-size: 1em !important;
     }
+
     header {
         height: 50px;
         /*領域の高さ指定*/
     }
+
     h1 {
         font-size: 2em;
         line-height: 50px;
@@ -421,12 +448,20 @@ td {
         height: 50px;
         /*領域の高さ指定*/
     }
+
     article h2 {
         font-size: 3em;
     }
+
     .main_content {
-        font-size: 1.5em;
+        font-size: 1.6em;
     }
+
+    article a {
+        font-size: 2.5em !important;
+        width: 70%;
+    }
+
     .info {
         font-size: 0.9em;
         width: 80px;
@@ -434,24 +469,29 @@ td {
         height: 50px;
         /*領域の高さ指定*/
     }
+
     .info ul {
         padding: 5px 0;
         /*ボックス内側の余白*/
     }
+
     .wrapper {
         margin: 50px 0 0 0;
         /*ボックス外側の余白*/
     }
+
     .content {
         margin: 0;
         /*ボックス外側の余白*/
         width: 100%;
         /*幅指定(100%は画面横幅いっぱいに表示)*/
     }
+
     section {
         width: 90%;
         /*幅指定(100%は画面横幅いっぱいに表示)*/
     }
+
     .copyright {
         /*透明度設定*/
         opacity: 0.5;
