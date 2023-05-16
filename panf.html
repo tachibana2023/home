@@ -8,9 +8,6 @@
     <meta name="Description" content="千葉県立船橋高等学校の文化祭、「たちばな祭」の2023年公式サイトです。" />
     <meta name="Keywords" content="たちばな祭,文化祭,県船,県立船橋,2023,船橋高等学校,令和5年度" />
 
-    <meta name="theme-color" content="#000000">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
     <link rel="shortcut icon" type="img/x-icon" href="images/favicon.ico" />
 
@@ -33,69 +30,6 @@
 
         gtag('config', 'G-73TMZGG6F3');
     </script>
-
-
-    <!-- ローデュング画面 -->
-    <style>
-        #loader {
-            position: fixed;
-            left: 0px;
-            top: 0px;
-            width: 100%;
-            height: 100%;
-            z-index: 9999;
-            background: #000000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #loader-text {
-            color: white;
-            font-family: sans-serif;
-            font-size: 24px;
-            margin-left: 10px;
-            text-align: center;
-        }
-
-        .fade-out {
-            animation: fadeOut 1s;
-        }
-
-        @keyframes fadeOut {
-            from {
-                opacity: 1;
-            }
-
-            to {
-                opacity: 0;
-            }
-        }
-    </style>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var loaderText = document.getElementById("loader-text");
-        });
-
-        window.addEventListener('load', function () {
-            var loader = document.getElementById("loader");
-            var dots = "";
-            var intervalId = setInterval(function () {
-                var loaderText = document.getElementById("loader-text");
-                dots += ".";
-                loaderText.innerHTML = "Loading" + dots;
-            }, 50);
-            setTimeout(function () {
-                loader.classList.add("fade-out");
-                loader.addEventListener('animationend', function () {
-                    loader.style.display = "none";
-                    clearInterval(intervalId);
-                });
-            }, 0);
-        });
-    </script>
-
 </head>
 
 <body>
@@ -174,68 +108,17 @@
 
 
 
-    <!-- ローディング画面もどき -->
-    <div id="loader">
-        <div id="loader-text">Loading</div>
-    </div>
-
 
     <div class="wrapper">
         <div class="content">
 
-            <!--スライドショー-->
-            <div class="twilight-wrapper">
-                <div class="slide-wrapper">
-                    <div class="twilight-show">
-                        <div class="twilight-box">
-                            <div><img src="images/slide1.webp" alt="スライドショー" /></div>
-                            <div><img src="images/slide2.webp" alt="スライドショー" /></div>
-                            <div><img src="images/slide3.webp" alt="スライドショー" /></div>
-                        </div>
-                        <div class="arrow-right"></div>
-                    </div>
-                </div>
-            </div>
-
-
-
             <!--ページのメイン部分-->
-            <article id="about_article">
-                <br>
-                <br>
-                <div class="main_content">今年は4年ぶりに一般公開します！</div>
-                <div class="main_content">ぜひきてください！</div>
-                <br>
-                <br>
-                <h2>日程</h2>
-                <div class="main_content right">6月17日(土) 9:30-12:30<br>13:00-16:00<br>6月18日(日) 9:00-12:00</div>
-                <br>
-                <br>
-                <h2>注意事項</h2>
-                <div class="main_content">上履き,外履き入れを必ず持参してください</div>
-                <a href="notes.html" class="main_content">詳しくはこちら</a>
-                <div class="main_content">
-            </article>
-
-            <br>
-            <br>
-
             <article>
-            <h2 style="font-size: 2em;">2023年度たちばな祭テーマ</h2>
-                <h2 style="font-size: 4.8em;">「船高とは」</h2>
-                <section>
-                    <h3>たちばな祭2023テーマ「船高とは」に込めた想いは主に2点あります。</h3>
-                    <ul>
-                        <li> 1.日々様々な問いと格闘している船高生ひとりひとりが、自分の思う船高を日々追い求めながら取り組むような文化祭にしたいという点
-                        <li> 2.「船高」を創っていくのは我々船高生であり、その自覚を忘れずにもってほしいという点
-                    </ul>
-                </section>
-                <!-- <div class="main_content">たちばな祭2023テーマ「船高とは」に込めた想いは主に2点あります。</div>
-            <div class="main_content">1.日々様々な問いと格闘している船高生ひとりひとりが、自分の思う船高を日々追い求めながら取り組むような文化祭にしたいという点</div>
-            <div class="main_content">2.「船高」を創っていくのは我々船高生であり、その自覚を忘れずにもってほしいという点</div> -->
-                <div class="main_content"> また、今年から一般公開が再開するので、一般の方々に、それぞれの、あなただけの「船高」を見つけてもらいたいという願いも込めたテーマとなっております。
-                </div>
-
+                <h2>申し訳ございません</h2>
+                <br>
+                <div class="main_content">このコンテンツは現在作成中です。</div>
+                <br>
+                <br>
             </article>
 
             <!-- / .content -->
@@ -244,23 +127,11 @@
     </div>
 
     <!--javascript設定-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <!--googleのCDN（ネットワーク経由でコンテンツを提供するサービス）よりjqueryをロード-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <!--エフェクト効果-->
     <script src="js/vertical-responsive-menu.min.js"></script>
     <!--レスポンシブメニュー-->
-    <script src="js/twilight.js"></script>
-    <!--スライドショー-->
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.twilight-show').twilight();
-        });
-        setTimeout(function () {
-            $(".arrow-right").click();
-            setTimeout(arguments.callee, 5000);
-        }, 3000);
-    </script>
+    <script src="js/jquery.customSelect.min.js"></script>
     <script src="js/scrolltopcontrol.js"></script>
     <!--スクロールしながらページのトップに戻る-->
 

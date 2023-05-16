@@ -308,7 +308,7 @@ article h2 {
 }
 
 article h3 {
-    font-family: sans-serif;
+    font-family: serif;
     font-size: 1.5em;
     font-weight: normal;
     /*フォントの太さ指定(normalは標準)*/
@@ -331,7 +331,7 @@ article a {
 }
 
 article li {
-    font-family: sans-serif;
+    font-family: serif;
     font-size: 1.3em;
     margin-left: 20px;
     /*ボックス外側左の余白*/
@@ -345,8 +345,7 @@ article li {
 /* ----- テーブル設定 ----- */
 
 .ta {
-    width: 100%;
-    /*幅指定(100%は画面横幅いっぱいに表示)*/
+    width: 95%;
     border-collapse: collapse;
     /*境界線の表示指定(collapseは重ねて表示)*/
     margin: 0 auto;
@@ -355,17 +354,24 @@ article li {
 
 .ta th,
 td {
-    border: none;
+    border: #fff;
     /*境界線の一括指定(noneはなし)*/
-    padding: 0 0 10px 10px;
+
+    border-left-color: #fff;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+
+    padding: 10px 10px 10px 10px;
     /*ボックス内側の余白*/
-    color: #333;
+    color: #ffffff;
     /*文字色指定*/
     font-size: 1.3em;
 
     font-weight: normal;
     /*フォントの太さ指定(normalは標準)*/
-    text-align: left;
+    text-align: center;
     /*行の水平方向の揃え方(leftは左寄せ)*/
 }
 
