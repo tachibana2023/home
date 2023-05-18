@@ -341,6 +341,11 @@ article li {
     font-size: 100%;
 }
 
+/* ----- 改行位置設定 ----- */
+
+span.aks {
+    display: inline-block;
+}
 
 /* ----- テーブル設定 ----- */
 
