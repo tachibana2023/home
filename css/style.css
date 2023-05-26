@@ -170,45 +170,25 @@ h1 a:hover {
 
 /*右上の内容*/
 
-.contact {
+.top_countdown {
     position: absolute;
     /*ボックスの配置方法(absoluteは絶対位置配置)*/
-    top: 0;
-    /*上からの距離(positionで指定している場合に適用)*/
-    right: 3px;
-    /*右からの距離(positionで指定している場合に適用)*/
-}
+    top: 10px;
+    right: 8px;
 
-.info {
-    font-size: 1em;
-    width: 80px;
-    /*幅指定(100%は画面横幅いっぱいに表示)*/
-    height: 70px;
-    /*領域の高さ指定*/
-    text-align: center;
-    /*行の水平方向の揃え方(centerは中央揃え)*/
-}
-
-.info ul {
-    padding: 12px 0;
-    /*ボックス内側の余白*/
-}
-
-.info li {
-    padding: 0 0 7px 0;
-    /*ボックス内側の余白*/
-    line-height: 1;
-    /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
-}
-
-.info a {
     color: #ffffff;
-    /*文字色指定*/
-    text-decoration: none;
-    /*テキストの装飾指定(下線、上線など)(noneはなし)*/
+    font-size: 1.5em;
+    text-align: center;
 }
 
-.info a:hover {
+.top_countdown a {
+    font-size: 2em;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Yuji Syuku', cursive;;
+}
+
+.top_countdown a:hover {
     /*時間的変化指定*/
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
@@ -225,7 +205,6 @@ h1 a:hover {
 
 .copyright {
     color: #fff;
-    /*文字色指定*/
     font-size: 0.9em;
     line-height: 15px;
     /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
@@ -468,22 +447,8 @@ td {
         font-size: 1.6em;
     }
 
-    article a {
-        font-size: 2.5em !important;
-        width: 70%;
-    }
-
-    .info {
+    .top_countdown {
         font-size: 0.9em;
-        width: 80px;
-        /*幅指定(100%は画面横幅いっぱいに表示)*/
-        height: 50px;
-        /*領域の高さ指定*/
-    }
-
-    .info ul {
-        padding: 5px 0;
-        /*ボックス内側の余白*/
     }
 
     .wrapper {

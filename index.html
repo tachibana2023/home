@@ -27,17 +27,14 @@
     <link rel="shortcut icon" type="img/x-icon" href="images/favicon.ico" />
 
     <link rel="stylesheet" href="css/style.css">
-    <!--google_webフォント-->
     <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
-    <!--アイコンwebフォント-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <!--レスポンシブメニュー-->
     <link rel="stylesheet" href="css/vertical-responsive-menu.css" />
-    <!--スライドショー-->
     <link rel="stylesheet" href="css/twilight.css">
 
     <script src="js/loading.js"></script>
     <link rel="stylesheet" href="css/loading.css">
+    <script src="js/countdown.js"></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-73TMZGG6F3"></script>
@@ -64,13 +61,10 @@
         <h1><a href="index.html" title="たちばな祭公式">たちばな祭2023</a></h1>
 
         <!--ページ右上の表示-->
-        <div class="contact info">
-            <a href="contact.html">
-                <ul>
-                    <li><i class="fa fa-envelope-o fa-2x"></i> </li>
-                    <li>お問い合わせ</li>
-                </ul>
-            </a>
+        <div class="top_countdown">
+            あと
+            <a href="countdown.html" id="top_num">0</a>
+            日
         </div>
     </header>
 
@@ -86,10 +80,10 @@
                 <label class="menu--link" title="PRODUCT"> <i class="menu--icon  fa fa-fw fa-building"></i> <span
                         class="menu--label">出し物一覧</span> </label>
                 <ul class="sub_menu">
-                    <li class="sub_menu--item"> <a href=".html" class="sub_menu--link">1年(ｱﾄﾗｸｼｮﾝ等)</a> </li>
-                    <li class="sub_menu--item"> <a href=".html" class="sub_menu--link">2年(食品等)</a> </li>
-                    <li class="sub_menu--item"> <a href=".html" class="sub_menu--link">3年(劇)</a> </li>
-                    <li class="sub_menu--item"> <a href=".html" class="sub_menu--link">有志団体(部活等)</a> </li>
+                    <li class="sub_menu--item"> <a href="panf.html" class="sub_menu--link">1年(ｱﾄﾗｸｼｮﾝ等)</a> </li>
+                    <li class="sub_menu--item"> <a href="panf.html" class="sub_menu--link">2年(食品等)</a> </li>
+                    <li class="sub_menu--item"> <a href="panf.html" class="sub_menu--link">3年(劇)</a> </li>
+                    <li class="sub_menu--item"> <a href="panf.html" class="sub_menu--link">有志団体(部活等)</a> </li>
                 </ul>
             </li>
             <li class="menu--item">
@@ -165,7 +159,7 @@
                 <h2>注意事項</h2>
                 <div class="main_content"><span class="aks">上履き,外履き入れを</span><span class="aks">必ず</span><span
                         class="aks">持参してください</span></div>
-                <a href="notes.html" class="main_content">詳しくはこちら</a>
+                <a href="notes.html" class="main_content"><span class="aks">詳しくは</span><span class="aks">こちら</span></a>
                 <div class="main_content">
             </article>
 
@@ -175,16 +169,19 @@
             <article>
                 <h2 style="font-size: 2em;">2023年度たちばな祭テーマ</h2>
                 <h2 style="font-size: 4.8em;">「船高とは」</h2>
-                <section>
-                    <h3>たちばな祭2023テーマ「船高とは」に込めた想いは主に2点あります。</h3>
+                <!-- <section>
+                    <h3></h3>
                     <ul>
-                        <li> 1.日々様々な問いと格闘している船高生ひとりひとりが、自分の思う船高を日々追い求めながら取り組むような文化祭にしたいという点
-                        <li> 2.「船高」を創っていくのは我々船高生であり、その自覚を忘れずにもってほしいという点
+                        <li>
+                        <li>
                     </ul>
-                </section>
+                </section> -->
                 <!-- <div class="main_content">たちばな祭2023テーマ「船高とは」に込めた想いは主に2点あります。</div>
             <div class="main_content">1.日々様々な問いと格闘している船高生ひとりひとりが、自分の思う船高を日々追い求めながら取り組むような文化祭にしたいという点</div>
             <div class="main_content">2.「船高」を創っていくのは我々船高生であり、その自覚を忘れずにもってほしいという点</div> -->
+                <div class="main_content">たちばな祭2023テーマ「船高とは」に込めた想いは主に2点あります。</div>
+                <div class="main_content">1.日々様々な問いと格闘している船高生ひとりひとりが、自分の思う船高を日々追い求めながら取り組むような文化祭にしたいという点</div>
+                <div class="main_content">2.「船高」を創っていくのは我々船高生であり、その自覚を忘れずにもってほしいという点</div>
                 <div class="main_content"> また、今年から一般公開が再開するので、一般の方々に、それぞれの、あなただけの「船高」を見つけてもらいたいという願いも込めたテーマとなっております。
                 </div>
 
@@ -204,6 +201,7 @@
     <!--レスポンシブメニュー-->
     <script src="js/twilight.js"></script>
     <!--スライドショー-->
+    <!--スクロールしながらページのトップに戻る-->
     <script type="text/javascript">
         $(document).ready(function () {
             $('.twilight-show').twilight();
@@ -214,7 +212,6 @@
         }, 3000);
     </script>
     <script src="js/scrolltopcontrol.js"></script>
-    <!--スクロールしながらページのトップに戻る-->
 
 </body>
 
