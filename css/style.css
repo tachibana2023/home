@@ -42,7 +42,7 @@ body {
 
 body {
     font-size: 75%;
-    line-height: 2;
+    line-height: 1.9;
     /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
     /*background: #161616;*/
     /*背景は下に写りました*/
@@ -76,11 +76,6 @@ ol,
 ul {
     list-style: none;
     /*リストマーカーの種類指定(noneはなし)*/
-}
-
-a {
-    color: #333;
-    /*文字色指定*/
 }
 
 a:hover {
@@ -145,11 +140,9 @@ h1 {
 h1 a {
     top: auto;
     left: auto;
-    /* color: rgb(255, 235, 78); */
     color: #fff;
-    /*文字色指定*/
     text-decoration: none;
-    /*テキストの装飾指定(下線、上線など)(noneはなし)*/
+    white-space: nowrap;
 }
 
 h1 a:hover {
@@ -185,7 +178,7 @@ h1 a:hover {
     font-size: 2em;
     color: #ffffff;
     text-decoration: none;
-    font-family: 'Yuji Syuku', cursive;;
+    font-family: 'Yuji Syuku', cursive;
 }
 
 .top_countdown a:hover {
@@ -275,6 +268,25 @@ section {
     margin-bottom: 5%;
 }
 
+.left {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.new {
+    font-size: 0.8em;
+    font-family: serif;
+    color: red;
+}
+
+.news {
+    font-size: 0.8em;
+    color: #fff;
+    text-decoration: none;
+}
+
 article h2 {
     font-size: 4.5em;
     font-weight: normal;
@@ -286,17 +298,19 @@ article h2 {
     /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
 }
 
-article h3 {
+article section h3 {
     font-family: serif;
     font-size: 1.5em;
+    color: #000;
     font-weight: normal;
     /*フォントの太さ指定(normalは標準)*/
     margin-bottom: 10px;
     /*ボックス外側下の余白*/
+    text-align: left;
 }
 
-article a {
-    font-size: 2.8em !important;
+article .box_link {
+    font-size: 2.8em;
     display: block;
     text-align: center;
     text-decoration: none;
@@ -320,6 +334,14 @@ article li {
     font-size: 100%;
 }
 
+hr {
+    padding: 0px;
+    border: none;
+    border-top: 1px solid #fff;
+    width: 80%;
+    height: 80%;
+}
+
 /* ----- 改行位置設定 ----- */
 
 span.aks {
@@ -341,22 +363,60 @@ td {
     border: #fff;
     /*境界線の一括指定(noneはなし)*/
 
-    border-left-color: #fff;
-
     border-style: solid;
     border-width: 1px;
     border-color: white;
 
     padding: 10px 10px 10px 10px;
-    /*ボックス内側の余白*/
     color: #ffffff;
-    /*文字色指定*/
     font-size: 1.3em;
 
     font-weight: normal;
-    /*フォントの太さ指定(normalは標準)*/
+
     text-align: center;
-    /*行の水平方向の揃え方(leftは左寄せ)*/
+    /* 改行可能にする */
+    word-break: break-word;
+    /* やっぱ禁止 */
+    white-space: nowrap;
+}
+
+/* プログラム(一般) */
+.out_program{
+    overflow-x: auto;
+    width: 97%;
+    padding: 0px 0px 0px 3%;
+}
+
+.program th,
+.program td {
+    padding: 5px 5px 5px 5px;
+    font-size: 1em;
+}
+
+.program tr:hover {
+    /* 存在意義はないかも */
+    background-color: #dddddd57;
+    cursor: pointer;
+}
+
+.program .hidden_row {
+    /* 初期見えない設定 */
+    display: none;
+}
+
+/* タイムテーブル(体育関係) */
+.time_table {
+    overflow-x: auto;
+}
+
+.time_table table tr td:nth-child(2) {
+    font-size: 0.8em;
+}
+
+.gym th,
+.gym td {
+    font-size: 1em;
+    padding: 10px 5px 10px 5px;
 }
 
 /*map設定*/
@@ -423,7 +483,7 @@ td {
     th,
     td,
     dl {
-        font-size: 1em !important;
+        font-size: 1em;
     }
 
     header {
@@ -443,8 +503,12 @@ td {
         font-size: 3em;
     }
 
+    article .box_link {
+        font-size: 1.8em;
+    }
+
     .main_content {
-        font-size: 1.6em;
+        font-size: 1.5em;
     }
 
     .top_countdown {
@@ -474,5 +538,15 @@ td {
         filter: alpha(opacity=50);
         -moz-opacity: 0.5;
         /*ここまで透明度設定*/
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .gym {
+        width: auto;
+    }
+
+    .program{
+        width: 80%;
     }
 }

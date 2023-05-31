@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>たちばな祭2023</title>
+    <meta name="Description" content="千葉県立船橋高等学校の文化祭、「たちばな祭」の2023年公式サイトです。" />
+    <meta name="Keywords" content="たちばな祭,文化祭,県船,県立船橋,2023,船橋高等学校,令和5年度" />
+
+    <!--OGP設定-->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="たちばな祭2023" />
+    <meta property="og:description" content="千葉県立船橋高等学校の文化祭、「たちばな祭」の2023年公式サイトです。" />
+    <meta property="og:url" content="https://tachibana2023.github.io/home/" />
+    <meta property="og:site_name" content="たちばな祭2023" />
+    <meta property="og:image" content="https://tachibana2023.github.io/home/images/slide1.webp" />
+    <!--Twitterカード設定-->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name='viewport' content='initial-scale=1, viewport-fit=cover'>
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" type="img/x-icon" href="images/favicon.ico" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/vertical-responsive-menu.css" />
+
+    <script src="js/countdown.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-73TMZGG6F3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-73TMZGG6F3');
+    </script>
+
+</head>
+
+<body>
+    <noscript>
+        <p>※このページはJavaScriptを使用しています。JavaScript設定を有効にしてご覧ください。</p>
+    </noscript>
+
+    <!--ヘッダー-->
+    <header class="header clearfix">
+        <button type="button" id="toggleMenu" class="toggle_menu"> <i class="fa fa-bars"></i> </button>
+
+        <!--ロゴ（ページ左上のサイト名）-->
+        <h1><a href="index.html" title="たちばな祭公式">たちばな祭2023</a></h1>
+
+        <!--ページ右上の表示-->
+        <div class="top_countdown">
+            あと
+            <a href="countdown.html" id="top_num">0</a>
+            日
+        </div>
+    </header>
+
+    <!--ナビゲーションメニューー-->
+    <nav class="vertical_nav">
+        <ul id="js-menu" class="menu">
+            <li class="menu--item">
+                <a href="notes.html" class="menu--link" title="NOTES"> <i
+                        class="menu--icon  fa fa-fw fa-exclamation-triangle"></i> <span class="menu--label">注意事項</span>
+                </a>
+            </li>
+            <li class="menu--item">
+                <a href="tour.html" class="menu--link" title="TOUR"> <i class="menu--icon  fa fa-fw fa-bank"></i> <span
+                        class="menu--label">学校見学ツアー</span> </a>
+            </li>
+            <li class="menu--item  menu--item__has_sub_menu">
+                <label class="menu--link" title="PRODUCT"> <i class="menu--icon  fa fa-fw fa-building"></i> <span
+                        class="menu--label">出し物一覧</span> </label>
+                <ul class="sub_menu">
+                    <li class="sub_menu--item"> <a href="panf.html" class="sub_menu--link">1年(ｱﾄﾗｸｼｮﾝ等)</a> </li>
+                    <li class="sub_menu--item"> <a href="panf.html" class="sub_menu--link">2年(食品等)</a> </li>
+                    <li class="sub_menu--item"> <a href="panf.html" class="sub_menu--link">3年(劇)</a> </li>
+                    <li class="sub_menu--item"> <a href="panf.html" class="sub_menu--link">有志団体(部活等)</a> </li>
+                </ul>
+            </li>
+            <li class="menu--item">
+                <a href="panf.html" class="menu--link" title="PAN"> <i class="menu--icon  fa fa-fw fa-book"></i> <span
+                        class="menu--label">ぱんふ(まだ)</span> </a>
+            </li>
+            <li class="menu--item">
+                <a href="access.html" class="menu--link" title="ACCESS"> <i class="menu--icon  fa fa-fw fa-map"></i>
+                    <span class="menu--label">アクセス</span> </a>
+            </li>
+            <li class="menu--item">
+                <a href="countdown.html" class="menu--link" title="COUNTDOWN"> <i
+                        class="menu--icon  fa fa-fw fa-hourglass-half"></i> <span class="menu--label">カウントダウン</span>
+                </a>
+            </li>
+            <br>
+            <br>
+            <br>
+            <li class="menu--item">
+                <a href="admin.html" class="menu--link" title="DEV"> <i class="menu--icon  fa fa-fw fa-code"></i>
+                    <span class="menu--label">管理者より</span> </a>
+            </li>
+
+        </ul>
+        <button id="collapse_menu" class="collapse_menu"> <i class="collapse_menu--icon  fa fa-fw"></i> <span
+                class="collapse_menu--label">Recolher menu</span> </button>
+
+        <!--ページ左下の表示-->
+        <div class="copyright">Copyright(C) <br> たちばな祭公式<br> All Rights Reserved.</div>
+    </nav>
+
+
+
+
+
+
+    <div class="wrapper">
+        <div class="content">
+
+            <!--ページのメイン部分-->
+            <article>
+                <h2>学校見学ツアー</h2>
+                <br>
+                <div class="main_content"><span class="aks">今年の文化祭で</span><span class="aks">生徒による</span><span
+                        class="aks">学校見学ツアーを</span><span class="aks">開催いたします。</span></div>
+                <div class="main_content"><span class="aks">実際に先輩が</span><span class="aks">案内するので</span><span
+                        class="aks">学校の雰囲気を</span><span class="aks">味わうことができます。</span></div>
+                <div class="main_content"><span class="aks">先輩に</span><span class="aks">どんなことでも</span><span
+                        class="aks">質問することができます。</span></div>
+                <br>
+                <h2 style="color: red;">事前予約制です。</h2>
+                <br>
+                <div class="main_content"><span class="aks">予約開始は</span><span class="aks">6/10 12:00~を</span><span
+                        class="aks">予定しています。</span></div>
+                <!-- <div class="main_content"><span class="aks"></span>続報を待て...</div> -->
+                <br>
+                <br>
+            </article>
+
+            <!-- / .content -->
+        </div>
+        <!-- / .wrapper -->
+    </div>
+
+    <!--javascript設定-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <!--googleのCDN（ネットワーク経由でコンテンツを提供するサービス）よりjqueryをロード-->
+    <script src="js/vertical-responsive-menu.min.js"></script>
+    <!--レスポンシブメニュー-->
+    <script src="js/scrolltopcontrol.js"></script>
+    <!--スクロールしながらページのトップに戻る-->
+
+</body>
+
+</html>
