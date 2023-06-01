@@ -37,19 +37,15 @@ img {
 html,
 body {
     height: 100%;
-    /*領域の高さ指定*/
 }
 
 body {
     font-size: 75%;
     line-height: 1.9;
     /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
-    /*background: #161616;*/
     /*背景は下に写りました*/
     /*背景指定*/
     font-family: 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', Osaka, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro';
-    color: #000000;
-    /*文字色指定*/
 }
 
 h2 {
@@ -67,9 +63,7 @@ body::before {
     left: 0;
     z-index: -1;
     width: 100%;
-    /* 横幅いっぱい */
     height: 100vh;
-    /* 縦幅いっぱい */
 }
 
 ol,
@@ -83,25 +77,15 @@ a:hover {
     /*テキストの装飾指定(下線、上線など)(noneはなし)*/
 }
 
-.color1 {
-    color: #990000;
-    /*文字色指定*/
-}
-
-
 /*header ページ上の内容*/
 
 header {
     position: fixed;
     /*ボックスの配置方法(fixedは固定)*/
     top: 0;
-    /*上からの距離(positionで指定している場合に適用)*/
     left: 0;
-    /*左からの距離(positionで指定している場合に適用)*/
     width: 100%;
-    /*幅指定(100%は画面横幅いっぱいに表示)*/
     height: 70px;
-    /*領域の高さ指定*/
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100;Blue+Grey+Flat */
     background: #000000;
     /* Old browsers */
@@ -129,12 +113,11 @@ header {
 h1 {
     padding-left: 30px;
     font-family: serif;
-    /*フォントの種類指定(googleのwebフォント)*/
     font-size: 3em;
     line-height: 70px;
     /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
     height: 70px;
-    /*領域の高さ指定*/
+    white-space: nowrap;
 }
 
 h1 a {
@@ -204,9 +187,7 @@ h1 a:hover {
     position: absolute;
     /*ボックスの配置方法(fixedは固定)*/
     bottom: 20px;
-    /*下からの距離(positionで指定している場合に適用)*/
     left: 20px;
-    /*左からの距離(positionで指定している場合に適用)*/
 }
 
 
@@ -216,16 +197,12 @@ h1 a:hover {
     float: right;
     /*要素を左か右に寄せて配置(rightは右に寄せる)*/
     width: 100%;
-    /*幅指定(100%は画面横幅いっぱいに表示)*/
     margin-top: 80px;
-    /*ボックス外側上の余白*/
     margin-left: -200px;
-    /*ボックス外側左の余白*/
 }
 
 .content {
     margin-left: 200px;
-    /*ボックス外側左の余白*/
 }
 
 .center {
@@ -236,20 +213,15 @@ h1 a:hover {
 
 article {
     width: 100%;
-    /*幅指定(100%は画面横幅いっぱいに表示)*/
     margin: 20px 0 50px 0;
     /*ボックス外側の余白*/
 }
 
 section {
     width: 80%;
-    /*幅指定(100%は画面横幅いっぱいに表示)*/
     margin: 0 auto;
-    /*ボックス外側の余白*/
     padding: 20px;
-    /*ボックス内側の余白*/
     background: #ffffff;
-    /*背景指定*/
 }
 
 .main_content {
@@ -290,10 +262,8 @@ section {
 article h2 {
     font-size: 4.5em;
     font-weight: normal;
-    /*フォントの太さ指定(normalは標準)*/
     font-family: 'Yuji Syuku', cursive;
     text-align: center;
-    /*行の水平方向の揃え方(centerは中央揃え)*/
     line-height: 2;
     /*行の高さ指定(数値のみの場合はfont-sizeの倍数)*/
 }
@@ -303,9 +273,7 @@ article section h3 {
     font-size: 1.5em;
     color: #000;
     font-weight: normal;
-    /*フォントの太さ指定(normalは標準)*/
     margin-bottom: 10px;
-    /*ボックス外側下の余白*/
     text-align: left;
 }
 
@@ -327,7 +295,6 @@ article li {
     font-family: serif;
     font-size: 1.3em;
     margin-left: 20px;
-    /*ボックス外側左の余白*/
 }
 
 .terms_content li li {
@@ -355,7 +322,6 @@ span.aks {
     border-collapse: collapse;
     /*境界線の表示指定(collapseは重ねて表示)*/
     margin: 0 auto;
-    /*ボックス外側の余白(値2つは左から上下,左右の値(左右autoで中央配置))*/
 }
 
 .ta th,
@@ -370,10 +336,9 @@ td {
     padding: 10px 10px 10px 10px;
     color: #ffffff;
     font-size: 1.3em;
-
     font-weight: normal;
-
     text-align: center;
+
     /* 改行可能にする */
     word-break: break-word;
     /* やっぱ禁止 */
@@ -381,7 +346,7 @@ td {
 }
 
 /* プログラム(一般) */
-.out_program{
+.out_program {
     overflow-x: auto;
     width: 97%;
     padding: 0px 0px 0px 3%;
@@ -425,11 +390,8 @@ td {
     position: relative;
     /*ボックスの配置方法(relativeは相対位置配置)*/
     padding-bottom: 56.25%;
-    /*ボックス内側下の余白*/
     padding-top: 30px;
-    /*ボックス内側上の余白*/
     height: 0;
-    /*領域の高さ指定*/
     overflow: hidden;
     /*ボックスのはみ出た部分の表示指定(hiddenは非表示)*/
 }
@@ -438,13 +400,9 @@ td {
     position: absolute;
     /*ボックスの配置方法(absoluteは絶対位置配置)*/
     top: 0;
-    /*上からの距離(positionで指定している場合に適用)*/
     left: 0;
-    /*左からの距離(positionで指定している場合に適用)*/
     width: 100%;
-    /*幅指定(100%は画面横幅いっぱいに表示)*/
     height: 100%;
-    /*領域の高さ指定*/
 }
 
 
@@ -546,7 +504,7 @@ td {
         width: auto;
     }
 
-    .program{
+    .program {
         width: 80%;
     }
 }
