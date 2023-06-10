@@ -45,6 +45,10 @@
         gtag('config', 'G-73TMZGG6F3');
     </script>
 
+    <script>
+        function show_hide_row(row) { $("#" + row).toggle(); }
+    </script>
+
 </head>
 
 <body>
@@ -120,59 +124,178 @@
 
 
 
-
     <div class="wrapper">
         <div class="content">
-
-            <!--ページのメイン部分-->
-            <article>
-                <h2>管理者より</h2>
-                <div class="main_content"><span class="aks">どうもみなさん</span><span class="aks">こんにちわ</span><span
-                        class="aks">管理者です。</span></div>
-
-            </article>
-
-            <article>
-
-            </article>
-
-            <!--
-
-            <管理人の掃き溜め日記>
-            
-            ----------
-            流石にこのページ更新してなさすぎてアレなんだけど何書けばいいかわからんから放置してます。。
-            ということでまぁ...こんにちは。
-            個人タスクとしてサイトを作ってます、、
-            まぁこれを読んでいる人ならもうわかると思いますがだいぶ無駄な処理をしていたり
-            突っ込みたいところが色々あると思いますがまぁ許してください()
-            自分自身こういうしっかりしたサイトを作るのが初めてで色々新しい経験なのでとても新鮮です。
-            せっかくだから色々なことに挑戦していきたいと思いますのでよろしくお願いします！
-            2023-06-05 管理人
-            ----------
-            
-            -->
-
-            <!-- <article>
-                <h2>軌跡</h2>
-                <br>
-                <table class="ta">
+            <div class="main_content">だしもん</div>
+            <div class="out_program">
+                <table class="ta program">
                     <tr>
-                        <th>2023,04,26</th>
-                        <th>公開</th>
+                        <th width="10%">クラス</th>
+                        <th width="50%">タイトル</th>
+
+                        <th width="10%">場所</th>
+                        <th width="10%">ジャンル</th>
+                        <th width="10%">待ち時間</th>
+
                     </tr>
                     <tr>
-                        <th>2023,04,10</th>
+                        <td>1-A</td>
+                        <td>SUPER MARIO BROS. 1-A</td>
+                        <td>本302</td>
+                        <td>体験</td>
+                        <td>n分</td>
+                    </tr>
+                    <!--  -->
+                    <tr>
+                        <td>1-B</td>
+                        <td>1-Baccarat</td>
+                        <td>本207</td>
+                        <td>体験</td>
                         <td></td>
                     </tr>
+                    <!--  -->
                     <tr>
-                        <th>2023,02,15</th>
-                        <td>文化委員長に公式サイトを作れと迫られる</td>
+                        <td>1-C</td>
+                        <td>Monsters in-C</td>
+                        <td>本202</td>
+                        <td>ｱﾄﾗｸｼｮﾝ</td>
+                        <td></td>
                     </tr>
+                    <!--  -->
+                    <tr>
+                        <td>1-D</td>
+                        <td>Death Hotel</td>
+                        <td>本104</td>
+                        <td>お化け</td>
+                        <td></td>
+                    </tr>
+                    <!--  -->
+                    <tr>
+                        <td>1-E</td>
+                        <td>ハリー・ポッターと四寮の謎</td>
+                        <td>本102</td>
+                        <td>ｱﾄﾗｸｼｮﾝ</td>
+                        <td></td>
+                    </tr>
+                    <!--  -->
+                    <tr>
+                        <td>1-F</td>
+                        <td>ミスターIを越えろVS生田</td>
+                        <td>本107</td>
+                        <td>ｱﾄﾗｸｼｮﾝ</td>
+                        <td></td>
+                    </tr>
+                    <!--  -->
+                    <tr>
+                        <td>1-G</td>
+                        <td>廃園になったユウジランド</td>
+                        <td>本305</td>
+                        <td>ｱﾄﾗｸｼｮﾝ</td>
+                        <td></td>
+                    </tr>
+                    <!--  -->
+                    <tr>
+                        <td>1-H</td>
+                        <td>としまえん</td>
+                        <td>本306</td>
+                        <td>体験</td>
+                        <td></td>
+                    </tr>
+                    <!--  -->
+                    <tr>
+                        <td>1-I</td>
+                        <td>旧ﾘｽｰｶ社会主義共和国連邦</td>
+                        <td>本209</td>
+                        <td>お化け</td>
+                        <td></td>
+                    </tr>
+                    <!--  -->
+                    <tr>
+                        <td colspan="5"></td>
+                    </tr>
+                    <!--  -->
+                    <tr>
+                        <td>2-A</td>
+                        <td>訳あり！！沼田不動産</td>
+                        <td>本301</td>
+                        <td>お化け</td>
+                        <td></td>
+                    </tr>
+                    <!--  -->
+                    <tr>
+                        <td>2-B</td>
+                        <td>推さないメイド エリーナ</td>
+                        <td>本201</td>
+                        <td>食品</td>
+                        <td></td>
+                    </tr>
+                    <!--  -->
+                    <tr>
+                        <td>2-C</td>
+                        <td>ばぶばぶ ぱにっく</td>
+                        <td>本205</td>
+                        <td>お化け</td>
+                        <td></td>
+                    </tr>
+                    <!--  -->
+                    <tr>
+                        <td>2-D</td>
+                        <td>めいどーなつかふぇ</td>
+                        <td>本208</td>
+                        <td>食品</td>
+                        <td></td>
+                    </tr>
+                    <!--  -->
+                    <tr>
+                        <td>2-E</td>
+                        <td>NEGI!</td>
+                        <td>本106</td>
+                        <td>ｱﾄﾗｸｼｮﾝ</td>
+                        <td></td>
+                    </tr>
+                    <!--  -->
+                    <tr>
+                        <td>2-F</td>
+                        <td>まさを庵</td>
+                        <td>本101</td>
+                        <td>食品</td>
+                        <td></td>
+                    </tr>
+                    <!--  -->
+                    <tr>
+                        <td>2-G</td>
+                        <td>るい〜Gマンション</td>
+                        <td>本206</td>
+                        <td>ｱﾄﾗｸｼｮﾝ</td>
+                        <td></td>
+                    </tr>
+                    <!--  -->
+                    <tr>
+                        <td>2-H</td>
+                        <td>甘味処SUGI</td>
+                        <td>本108</td>
+                        <td>食品</td>
+                        <td></td>
+                    </tr>
+                    <!--  -->
+                    <tr>
+                        <td>2-I</td>
+                        <td>メイドインアイズ</td>
+                        <td>本308</td>
+                        <td>食品</td>
+                        <td></td>
+                    </tr>
+                    <!--  -->
+                    <tr>
+                        <td colspan="5"></td>
+                    </tr>
+
                 </table>
-            </article> -->
+                <br>
+                <br>
+                <br>
 
-
+            </div>
             <!-- / .content -->
         </div>
         <!-- / .wrapper -->
@@ -180,10 +303,10 @@
 
     <!--javascript設定-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-    <!--googleのCDN（ネットワーク経由でコンテンツを提供するサービス）よりjqueryをロード-->
-    <script src="js/vertical-responsive-menu.min.js"></script> <!--レスポンシブメニュー-->
-    <script src="js/scrolltopcontrol.js"></script> <!--スクロールしながらページのトップに戻る-->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/vertical-responsive-menu.min.js"></script>
+    <!--スクロールしながらページのトップに戻る-->
+    <script src="js/scrolltopcontrol.js"></script>
 
 </body>
 
