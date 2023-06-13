@@ -345,6 +345,17 @@ td {
     white-space: nowrap;
 }
 
+.content .list {
+    justify-content: center;
+    text-align: left;
+    margin-bottom: 5%;
+}
+
+.content .list a {
+    color: #fff;
+    text-decoration: none;
+}
+
 /* プログラム(一般) */
 .out_program {
     overflow-x: auto;
