@@ -380,12 +380,7 @@ td {
     display: none;
 }
 
-/* タイムテーブル(体育関係) */
-.time_table {
-    overflow-x: auto;
-}
-
-.time_table table tr td:nth-child(2) {
+.out_program table tr td:nth-child(2) {
     font-size: 0.8em;
 }
 
