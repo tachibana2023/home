@@ -309,6 +309,15 @@ hr {
     height: 80%;
 }
 
+/* 枠設定 */
+.rounded-border {
+    border: 1.5px solid #fff;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+
 /* ----- 改行位置設定 ----- */
 
 span.aks {

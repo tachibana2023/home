@@ -24,7 +24,6 @@ document.addEventListener('keydown', (e) => {
     input.push(e.key);
     input.splice(-secretCode.length - 1, input.length - secretCode.length);
     if (input.join('') === secretCode.join('')) {
-        // ここに秘密のコードを実行する
         console.log('KONAMIコマンド発動!');
     }
 });
