@@ -167,6 +167,16 @@
         </section>
       </article>
 
+      <article>
+        <section>
+          T3:<div id="countdown_T3">--</div>
+          <br>
+          T4:<div id="countdown_T4">--</div>
+          <br>
+          T6:<div id="countdown_T6">--</div>
+        </section>
+      </article>
+
       <!-- / .content -->
     </div>
     <!-- / .wrapper -->
@@ -180,7 +190,10 @@
     #countdown_1,
     #countdown_2,
     #countdown_3,
-    #countdown_4 {
+    #countdown_4,
+    #countdown_T3,
+    #countdown_T4,
+    #countdown_T6 {
       font-size: 18px;
       font-weight: bold;
       display: inline-block;
@@ -197,11 +210,17 @@
     const countdownElement_2 = document.getElementById('countdown_2');
     const countdownElement_3 = document.getElementById('countdown_3');
     const countdownElement_4 = document.getElementById('countdown_4');
+
+    const countdownElement_T3 = document.getElementById('countdown_T3');
+    const countdownElement_T4 = document.getElementById('countdown_T4');
+    const countdownElement_T6 = document.getElementById('countdown_T6');
+    
     const targetDate = new Date('2023-06-17T00:30:00.000Z'); // UTCで指定（日本標準時で9時30分）
     const targetDate2 = new Date('2025-01-18T00:30:00.000Z'); // UTCで指定（日本標準時で9時30分）
 
     function updateCountdown() {
       const now = new Date();
+      
       const remainingSeconds = Math.floor((targetDate - now));
       const remainingSeconds2 = Math.floor((targetDate2 - now));
 
@@ -223,6 +242,16 @@
         countdownElement_1.textContent = '0';
         clearInterval(interval);
       }
+
+      // T3~T6
+      const currentTime = Math.floor(now.getTime() / 1000);
+      
+      const base3 = currentTime.toString(3).slice(-3);
+      countdownElement_T3.textContent = base3;
+      const base4 = currentTime.toString(4).slice(-3);
+      countdownElement_T4.textContent = base4;
+      const base6 = currentTime.toString(6).slice(-3);
+      countdownElement_T6.textContent = base6;
     }
 
     const interval = setInterval(updateCountdown, 50);
