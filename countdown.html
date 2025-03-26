@@ -217,13 +217,40 @@
     const countdownElement_T3 = document.getElementById('countdown_T3');
     const countdownElement_T4 = document.getElementById('countdown_T4');
     const countdownElement_T6 = document.getElementById('countdown_T6');
-    
+
+    function getNextTestDate() {
+      const now = new Date();
+      const jstNow = new Date(now.getTime() + 9 * 60 * 60 * 1000);
+      let year = jstNow.getFullYear();
+      let testDateUTC = new Date(Date.UTC(year, 0, 13, 0, 30, 0));
+
+      function getJSTDay(date) {
+        const jstDate = new Date(date.getTime() + 9 * 60 * 60 * 1000);
+        return jstDate.getUTCDay();
+      }
+
+      while (getJSTDay(testDateUTC) !== 6) {
+        testDateUTC.setUTCDate(testDateUTC.getUTCDate() + 1);
+      }
+
+      if (jstNow.getTime() >= testDateUTC.getTime()) {
+        year++;
+        testDateUTC = new Date(Date.UTC(year, 0, 13, 0, 30, 0));
+        while (getJSTDay(testDateUTC) !== 6) {
+          testDateUTC.setUTCDate(testDateUTC.getUTCDate() + 1);
+        }
+      }
+
+      console.log(testDateUTC);
+      return testDateUTC;
+    }
+
     const targetDate = new Date('2023-06-17T00:30:00.000Z'); // UTCで指定（日本標準時で9時30分）
-    const targetDate2 = new Date('2025-01-18T00:30:00.000Z'); // UTCで指定（日本標準時で9時30分）
+    const targetDate2 = getNextTestDate();
 
     function updateCountdown() {
       const now = new Date();
-      
+
       const remainingSeconds = Math.floor((targetDate - now));
       const remainingSeconds2 = Math.floor((targetDate2 - now));
 
@@ -248,7 +275,7 @@
 
       // T3~T6
       const currentTime = Math.floor(now.getTime() / 1000);
-      
+
       const base3 = currentTime.toString(3).slice(-3);
       countdownElement_T3.textContent = base3;
       const base4 = currentTime.toString(4).slice(-3);
